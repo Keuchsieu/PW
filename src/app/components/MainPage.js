@@ -5,7 +5,6 @@ import Footer from './Footer.js';
 function MainPage(props){
   return(
       <div className="MainPage">
-
         <p>MainPage content here</p>
         <Footer />
       </div>
