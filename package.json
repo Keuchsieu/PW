@@ -2,9 +2,11 @@
   "name": "personalwebsite",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm install && webpack --mode production && node server.js",
+    "build": "webpack --mode production",
+    "test": "webpack-dev-server --mode development --open --hot"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,7 @@
   "homepage": "https://github.com/Keuchsieu/PW#readme",
   "dependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^2.1.1",
@@ -35,5 +37,8 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.4.1"
   }
 }
