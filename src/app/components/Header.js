@@ -1,9 +1,14 @@
 import React from 'react';
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Dropdown from 'react-bootstrap/Dropdown';
 
 function Header(props){
   return(
     <div className="Header">
-      Header content
+      <DropdownButton title="testing dropdown">
+        <Dropdown.Item>content 1</Dropdown.Item>
+        <Dropdown.Item>2</Dropdown.Item>
+      </DropdownButton>
     </div>
   );
 }
