@@ -1,16 +1,19 @@
-var express = require('express');
-var path = require('path')
-// backend node js script
+const express = require('express');
+const path = require('path')
+// incase VM cannot use port 8000
 const port = process.env.PORT || 8000;
-// 
-var app = express();
-// middleware that put public folder's content onto server
-app.use(express.static(path.join(__dirname, 'public')));
+
+const app = express();
+// public dir
+const publicPath = path.join(__dirname, '/public');
+
+// setup static folder using middleware
+app.use(express.static(publicPath));
 
 app.get('/', (req, res)=>{
-    res.sendFile(__dirname + "/public/index.html");
+    res.send(__dirname + "/public/index.html");
 });
 
-var server = app.listen(port, ()=>{
+const server = app.listen(port, ()=>{
     console.log("Listening on port " + port);
 });

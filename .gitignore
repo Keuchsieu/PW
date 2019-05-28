@@ -1,4 +1,8 @@
 # local directories
 .vscode/
 node_modules/
+designs_prototypes/
+public/
+
+# root files
 package-lock.json
