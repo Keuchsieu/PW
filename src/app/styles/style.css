@@ -1,3 +1,11 @@
 p{
   background-color: aquamarine;
+  margin: auto;
+}
+div{
+  display: inline-block;
+}
+
+.contact{
+  margin: auto;
 }
