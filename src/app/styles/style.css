@@ -1,9 +1,15 @@
 p{
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   margin: auto;
 }
-div{
-  display: inline-block;
+
+.titles{
+  text-align: center;
+}
+
+.menu{
+  float: right;
+  height: inherit;
 }
 
 .contact{
