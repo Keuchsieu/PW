@@ -3,6 +3,7 @@
 node_modules/
 designs_prototypes/
 public/
+myprojects/
 
 # root files
 package-lock.json
