@@ -2,12 +2,17 @@ import React from 'react';
 import Footer from './Footer.js';
 import Header from './Header.js';
 
+var bodyStyle = {
+  height: '1000px',
+  paddingTop: '102px',
+  background: '#eeeeee'
+};
 
 function MainPage(props){
   return(
       <div className="MainPage">
         <Header />
-        <p>MainPage content here</p>
+        <div className="MainBody" style={bodyStyle}>content here</div>
         <Footer />
       </div>
   );
