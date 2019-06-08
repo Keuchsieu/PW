@@ -14,13 +14,23 @@ p{
 
 .contact{
   margin: auto;
-}
-
-.logoContainer{
   text-align: center;
 }
 
 .link_logo{
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.contact_title{
+  border-bottom-color: grey;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  width: 80%;
+  margin-bottom: 5px;
+}
+
+#copy-right{
+  color: #666666;
+  font-size: 50%;
 }
