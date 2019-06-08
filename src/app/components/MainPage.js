@@ -14,7 +14,15 @@ function MainPage(props){
       <div className="MainPage">
         <Sidebar />
         <Header />
-        <div className="MainBody" style={bodyStyle}>content here</div>
+        <div className="MainBody" style={bodyStyle}>
+          <div className="pageitem" id="introduction">
+            <p>Who am I:</p>
+            A developer,
+            A something,
+            some cool stuff
+          </div>
+          <div className="pageitem" id="project_1"></div>
+        </div>
         <Footer />
       </div>
   );
