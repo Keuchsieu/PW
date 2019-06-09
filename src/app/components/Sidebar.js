@@ -5,9 +5,10 @@ function Sidebar(props){
   return (
     <div className="Sidebar">
       <Menu>
-        <a className="menu-item" href="#introduction">
+        <a className="menu-item" href="#">
           About Me
         </a>
+        <a className="menu-item" href="#contactme">Contact Me</a>
       </Menu>
     </div>
   );

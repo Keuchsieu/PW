@@ -4,7 +4,7 @@ import Eng from '../external_file/eng.js';
 function Footer(props){
   var now = new Date();
   return(
-    <div className="Footer">
+    <div className="Footer" id='contactme'>
       <div className="contact">
         <br />
         <p className="contact_title titles">{Eng.contactMe}</p>
