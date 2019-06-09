@@ -4,6 +4,7 @@ node_modules/
 designs_prototypes/
 public/
 myprojects/
+template/
 
 # root files
 package-lock.json

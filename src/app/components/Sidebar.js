@@ -5,6 +5,7 @@ function Sidebar(props){
   return (
     <div className="Sidebar">
       <Menu>
+        <img alt='Dummy image'/>
         <a className="menu-item" href="#">
           About Me
         </a>
