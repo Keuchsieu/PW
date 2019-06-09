@@ -21,13 +21,8 @@ function MainPage(props){
         <Sidebar />
         <Header />
         <div className="MainBody" style={bodyStyle}>
-          <div className="pageitem" id="introduction" style={introStyle}>
-            <p>Who am I:</p>
-            A developer,
-            A something,
-            some cool stuff
-          </div>
-          <Section background='grey' link='foo' title='The Title' content='fake content' style={sectionStyle} />
+          <Section id='intro' background='white' title="About Me" content="A developer" style={introStyle} />
+          <Section id='sect1' background='grey' link='foo' link_name="Repo at Github" title='The Title' content='fake content' style={sectionStyle} />
           <div className="pageitem" id="project_1"></div>
         </div>
         <Footer />

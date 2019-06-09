@@ -5,11 +5,11 @@ function Section(props){
     background: props.background,
   }
   return (
-    <div className="Section">
+    <div className="Section" style={props.style}>
       <h4>{props.title}</h4>
       <div>
         <p style={contentStyle}>{props.content}</p>
-        <a href={props.link}>Repo at GitHub</a>
+        <a href={props.link}>{props.link_name}</a>
       </div>
     </div>
   );
