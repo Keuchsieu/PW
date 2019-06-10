@@ -11,9 +11,13 @@ const publicPath = path.join(__dirname, '/public');
 // setup static folder using middleware
 app.use(express.static(publicPath));
 
-app.get('/', (req, res)=>{
+app.get('', (req, res)=>{
     res.send(__dirname + "/public/index.html");
 });
+
+app.get('/sudoku',(req, res)=>{
+    res.redirect("/sudoku.html");
+})
 
 app.post('/solvesudoku', (req, res)=>{
     var rst = Sudoku(req);
