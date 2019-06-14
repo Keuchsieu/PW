@@ -7,7 +7,7 @@ function Block(props){
     display: 'inline-block'
   };
   if(props.color == 'a'){
-    blockStyle.background = '#666666';
+    blockStyle.background = '#eeeeff';
   };
   var rowStyle={
     height: '33.3333%',
