@@ -34,3 +34,7 @@ p{
   color: #666666;
   font-size: 50%;
 }
+
+div {
+  vertical-align: top;
+}

@@ -20,7 +20,7 @@ var yqStyle = {
 function Header(props){
   return(
     <div className="Header" style={headerStyle}>
-      <h3 className="titles" id="MyName" style={yqStyle}>Yuqing Qiu</h3>
+      <h3 className="titles" id="MyName" style={yqStyle}>Yuqing Qiu's Sudoku Solver</h3>
     </div>
   );
 }
