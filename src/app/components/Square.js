@@ -16,7 +16,19 @@ var inputStyle={
 
 function Square(props){
   function selectSquare(){
-    console.log("function called " + props.id);
+    setSelection(props.id);
+    console.log("function called ");
+  }
+
+  function setSelection(id){
+    var prev = document.getElementsByClassName("selected_square");
+    // cleanup previous selection
+    for(let i=0;i<prev.length;i++){
+      prev[i].className = "Square";
+    }
+    // set new selection
+    var newone = document.getElementById(id);
+    newone.className="Square selected_square";
   }
 
   return(
