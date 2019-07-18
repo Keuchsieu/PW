@@ -16,19 +16,19 @@ function Block(props){
   return(
   <div className="Block" id={props.id} style={blockStyle}>
     <div style={rowStyle}>
-      <Square />
-      <Square />
-      <Square />
+      <Square id={props.id + '1'}/>
+      <Square id={props.id + '2'}/>
+      <Square id={props.id + '3'}/>
     </div>
     <div style={rowStyle}>
-      <Square />
-      <Square />
-      <Square />
+      <Square id={props.id + '4'}/>
+      <Square id={props.id + '5'}/>
+      <Square id={props.id + '6'}/>
     </div>
     <div style={rowStyle}>
-      <Square />
-      <Square />
-      <Square />
+      <Square id={props.id + '7'}/>
+      <Square id={props.id + '8'}/>
+      <Square id={props.id + '9'}/>
     </div>
   </div>);
 }

@@ -5,7 +5,7 @@ var squareStyle={
   borderColor: 'grey',
   height: '100%',
   width: '33.3333%',
-  // border: '1px solid',
+  border: '1px solid',
   borderCollapse: 'collapse'
 };
 var inputStyle={
@@ -15,9 +15,13 @@ var inputStyle={
 }
 
 function Square(props){
+  function selectSquare(){
+    console.log("function called " + props.id);
+  }
+
   return(
-  <div className="Square" style={squareStyle}>
-    <button style={inputStyle}></button>
+  <div className="Square" id={props.id} style={squareStyle} onClick={selectSquare}>
+    {/* <button style={inputStyle}></button> */}
   </div>);
 }
 

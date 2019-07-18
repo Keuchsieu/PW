@@ -26,13 +26,13 @@ function Board(props){
   <div className="Board" style={boardStyle}>
     <h4 style={titleStyle}>Instructions</h4>
     <div>
-    <Block color='a'/><Block color='b'/><Block color='a'/>
+    <Block color='a' id='b1'/><Block color='b' id='b2'/><Block color='a' id='b3'/>
     </div>
     <div>
-    <Block color='b'/><Block color='a' /><Block color='b' />
+    <Block color='b' id='b4' /><Block color='a' id='b5' /><Block color='b' id='b6' />
     </div>
     <div>
-    <Block color='a' /><Block color='b' /><Block color='a' />
+    <Block color='a' id='b7' /><Block color='b' id='b8' /><Block color='a' id='b9' />
     </div>
     <br></br>
     <h6>
