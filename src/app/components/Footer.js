@@ -1,6 +1,10 @@
 import React from 'react';
 import Eng from '../external_file/eng.js';
 
+var inline_style = {
+  textAlign: 'center'
+}
+
 function Footer(props){
   var now = new Date();
   return(
@@ -17,7 +21,7 @@ function Footer(props){
           </a>
         </div>
       </div>
-      <p id="copy-right">{Eng.copyright} {now.getFullYear()} {Eng.byQYQ} {Eng.rightReserved}</p>
+      <p id="copy-right" style={inline_style}>{Eng.copyright} {now.getFullYear()} {Eng.byQYQ} {Eng.rightReserved}</p>
     </div>
   );
 }
