@@ -17,7 +17,7 @@ var inputStyle={
 function Square(props){
   function selectSquare(){
     setSelection(props.id);
-    console.log("function called ");
+    console.log("Selection made at " + props.id);
   }
 
   function setSelection(id){
