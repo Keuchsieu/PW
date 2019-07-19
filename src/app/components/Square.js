@@ -34,6 +34,7 @@ function Square(props){
   return(
   <div className="Square" id={props.id} style={squareStyle} onClick={selectSquare}>
     {/* <button style={inputStyle}></button> */}
+    <p></p>
   </div>);
 }
 
