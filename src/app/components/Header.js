@@ -1,6 +1,5 @@
 import React from 'react';
-import DropdownButton from 'react-bootstrap/DropdownButton'
-import Dropdown from 'react-bootstrap/Dropdown';
+import Instrution from './Instruction';
 
 var headerStyle = {
   height: '100px',
@@ -21,6 +20,7 @@ function Header(props){
   return(
     <div className="Header" style={headerStyle}>
       <h3 className="titles" id="MyName" style={yqStyle}>Yuqing Qiu's Sudoku Solver</h3>
+      <Instrution />
     </div>
   );
 }
