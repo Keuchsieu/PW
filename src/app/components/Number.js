@@ -7,6 +7,9 @@ var optionStyle = {
 function Number(props){
   function setNumber(){
     console.log("set "+props.num);
+    var selected = document.getElementsByClassName("selected_square")[0].childNodes;
+    selected[0].textContent = props.num;
+    console.log(selected[0].textContent);
   }
   return(
     <div className="Number" style={optionStyle}>

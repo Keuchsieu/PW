@@ -24,11 +24,14 @@ app.get('/sudoku',(req, res)=>{
 })
 
 app.post('/api/solvesudoku/v1.0', (req, res)=>{
-    console.log(req.body.board);
     var board = req.body.board;
     var solver = new Sudoku(board);
-    solver.solve()
-    res.send(solver.solution);
+    solver.solve();
+    var response = {
+        data: solver.solution
+    };
+    console.log(response);
+    res.status(200).send(JSON.stringify(response)).end();
 });
 
 app.get('/solvesudoku', (req, res)=>{

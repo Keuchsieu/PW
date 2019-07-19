@@ -8,18 +8,53 @@ var buttonStyle={
 function Options(props){
   var clear = function(){
     console.log('clears');
+    var selected = document.getElementsByClassName("selected_square")[0].firstChild;
+    selected.textContent = "";
+    // clears one square
+  }
+
+  var clearAll = function(){
+    console.log("clear all");
     var sqrs = document.getElementsByClassName("Square");
     for(let i = 0; i<sqrs.length;i++){
-      sqrs.p = "";
+      sqrs[i].childNodes[0].textContent = "";
     }
     // clear out 81 numbers
   }
+
   var solver = function(){
     // get 81 numbers
+    var board = [];
+    for(let i=1;i<10;i++){
+      let row = []
+      for(let j=1;j<10;j++){
+        let bid = "b"+i+j;
+        let s = document.getElementById(bid).innerText;
+        if(s == ''){
+          row.push('.');
+        } else {
+          row.push(s);
+        }
+      }
+      board.push(row);
+    }
+    console.log(board);
+
     // send to API
-    // receive respond
-    // assign to buttons
-    console.log("solves");
+    fetch('api/solvesudoku/v1.0', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'board': board
+      })
+    }).then((res)=>{// receive respond
+      res.json().then(solution => {
+        console.log(solution.data);
+        // assign to buttons
+      });
+    });
   }
   return(
     <div className="Options">
@@ -36,6 +71,7 @@ function Options(props){
       </h6>
       <br></br>
       <div>
+        <button id="clearAll" onClick={clearAll}>Clear All</button>
         <button id="clear" onClick={clear} style={buttonStyle}>Clear</button>
         <button id="solve" onClick={solver} style={buttonStyle}>Solve</button>
       </div>
