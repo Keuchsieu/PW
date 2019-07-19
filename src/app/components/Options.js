@@ -28,7 +28,7 @@ function Options(props){
     for(let i=1;i<10;i++){
       let row = []
       for(let j=1;j<10;j++){
-        let bid = "b"+i+j;
+        let bid = "s"+i+j;
         let s = document.getElementById(bid).innerText;
         if(s == ''){
           row.push('.');
@@ -53,9 +53,16 @@ function Options(props){
       res.json().then(solution => {
         console.log(solution.data);
         // assign to buttons
+        for(let i=1;i<10;i++){
+          for(let j=1;j<10;j++){
+            let sqr = document.getElementById('s'+i+j).firstElementChild;
+            sqr.innerText = solution.data[i-1][j-1];
+          }
+        }
       });
     });
   }
+
   return(
     <div className="Options">
       <h6>
